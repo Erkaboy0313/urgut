@@ -82,7 +82,7 @@ class Doctor(TranslatableModel):
     image = models.ImageField(upload_to='doctors/',null=True,blank=True)
     
     class Meta:
-        ordering = ['id']
+        ordering = ['-id']
         verbose_name_plural = 'Services'
 
 class AboutUs(TranslatableModel):
@@ -128,3 +128,7 @@ class Qvp(TranslatableModel):
     )
     image = models.ImageField(upload_to='doctors/',null=True,blank=True)
     contact = models.CharField(max_length=200,null=True,blank=True)
+
+    class Meta:
+        ordering = ['-id']
+        
